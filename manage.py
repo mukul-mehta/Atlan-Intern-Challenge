@@ -1,13 +1,10 @@
 import os
-
 from logging import getLogger
 
 from flask import current_app
 
-from app import blueprint
-from app import create_app, db
+from app import blueprint, create_app, db
 from app.logging_config import setup_logger
-
 
 app = create_app()
 app.register_blueprint(blueprint)

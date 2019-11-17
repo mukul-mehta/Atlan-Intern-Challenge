@@ -16,6 +16,7 @@ This repository contains code written as part of the challenge for a winter inte
 ### Installation and Setup Instructions
 
 * Clone this repository by running `git clone https://github.com/mukul-mehta/Atlan-Intern-Challenge.git`
+* Generate the random test data by running `python randomDataGen.py` present in the `app` directory. This will generate CSV Files for all 3 relevant cases in the `app/test-data` directory. 
 
 I've used Docker to containerize the app for easy deployment. To run the app with Docker:
 

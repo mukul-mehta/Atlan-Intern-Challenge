@@ -1,11 +1,11 @@
 import os
-
 from logging import getLogger
-from flask import Flask, Blueprint, render_template
-from app.config import Config
+
+from flask import Blueprint, Flask, render_template
 from flask_sqlalchemy import SQLAlchemy
 
-from app.exampleCase1 import case1 
+from app.config import Config
+from app.exampleCase1 import case1
 from app.exampleCase2 import case2
 from app.exampleCase3 import case3
 
@@ -37,4 +37,3 @@ def create_app():
         return render_template("index.html")
 
     return app
-

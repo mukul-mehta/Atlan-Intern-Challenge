@@ -1,10 +1,9 @@
-import os
 import csv
 import datetime
+import os
 import random
 import string
-
-from logging import getLogger 
+from logging import getLogger
 
 LOG = getLogger(__name__)
 
@@ -12,10 +11,14 @@ TEST_DATA_DIR = "./test-data"
 
 class TestDataGenerator:
 
-	'Class containing all functions relevant to generating random data for all three example cases.'
+	"""
+	Class containing all functions relevant to generating random data for all three example cases.
+	"""
 
 	def __init__(self):
-		'Constructor function for the class. When the class is called, the init method runs to call the relevant functions'
+		"""
+		Constructor function for the class. When the class is called, the init method runs to call the relevant functions
+		"""
 
 		os.makedirs(TEST_DATA_DIR, exist_ok=True)
 		self.makeTestData()
@@ -26,7 +29,9 @@ class TestDataGenerator:
 		self.exampleCase3()
 
 	def exampleCase1(self):
-	
+		"""
+		Generates data for the first test case. There are 3 columns corresponding to data1, data2 and data3 all of which are of type string. 
+		"""
 		data = [['data1', 'data2', 'data3']]
 		for _ in range(10000000):
 			data.append([self.randomText() for x in range(3)])
@@ -35,6 +40,10 @@ class TestDataGenerator:
 
 
 	def exampleCase2(self):
+		"""
+		Generates data for the second test case. There are 2 columns corresponding to date and data all of which are of type string.
+		The date is of type python datetime.datetime.  
+		"""
 		 
 		data = [['date', 'data']]
 		date_1 = datetime.datetime(2015, 8, 1)
@@ -50,7 +59,9 @@ class TestDataGenerator:
 
 
 	def exampleCase3(self):
-		
+		"""
+		Generates data for the third test case. There are 2 columns corresponding to name and phone which are of type string and integer respectively. 
+		"""
 		data = [['name', 'phone']]
 
 		for _ in range(10000):
