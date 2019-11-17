@@ -46,6 +46,9 @@ I feel the following things could be done to make the app better
 
 Instead of sending a request to /exNo/stopUpload, we could make a frontend using JSJS which shows a progress bar. On pressing a stop button, the process terminates rather than having to send a request to do so. 
 
+#### Heroku Deployment isn't working
+I tried deploying the app on heroku using the Docker image but couldn't complete the deployment process. The process shouldn't take too much time though since the docker container is working as expected. 
+
 #### Deploy on a Kubernetes cluster
 
 I started reading up about Kubernetes and did the tutorial on their website but I couldn't create a cluster and deploy this application to the cluster. 
