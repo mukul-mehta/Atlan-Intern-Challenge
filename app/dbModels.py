@@ -49,6 +49,3 @@ def stop():
     connection.rollback()
     connection.close()
     LOG.info("Rolled Back changes made to database")
-
-
-
